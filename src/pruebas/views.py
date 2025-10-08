@@ -32,3 +32,37 @@ def index(request: HttpRequest) -> HttpResponse:
     año_actual = datetime.now().year
     contexto = {"año": año_actual}
     return render(request, "pruebas/index.html", contexto)
+
+
+def listar_notas(request):
+    notas = [10, 8, 9, 4, 7]
+    return render(request, "pruebas/notas.html", {"lista_notas": notas})
+
+
+def nombres(request):
+    nombre = input("Nombre: ")
+    apellido = input("Apellido: ")
+    datos = {
+        "nombre": nombre,
+        "apellido": apellido,
+    }
+
+    return render(request, "pruebas/nombres.html", context=datos)
+
+
+def tirar_dado(request):
+    from datetime import datetime
+    from random import randint
+
+    tiro_de_dado = randint(1, 6)
+
+    if tiro_de_dado == 6:
+        mensaje = f"Has tirado el 🎲 y has obtenido ¡{tiro_de_dado}! 🎉 Ganaste!!!"
+    else:
+        mensaje = f"Has tirado el 🎲 y has obtenido ¡{tiro_de_dado}! 🥶"
+    datos = {
+        "titulo": "Tiro de Dados",
+        "mensaje": mensaje,
+        "fecha": datetime.now().strftime("%H:%M:%S.%f"),
+    }
+    return render(request, "pruebas/dados.html", context=datos)

@@ -20,10 +20,13 @@ from django.urls import path
 
 from pruebas.views import (
     index,
+    listar_notas,
     mi_json,
+    nombres,
     saludar,
     saludar_con_etiqueta,
     saludar_con_parametros,
+    tirar_dado,
 )
 
 urlpatterns = [
@@ -33,4 +36,7 @@ urlpatterns = [
     path("saludar3/<str:nombre>/<str:apellido>", saludar_con_parametros),
     path("json/", mi_json),
     path("", index),
+    path("notas/list/", listar_notas),
+    path("nombres/", nombres),
+    path("dados/", tirar_dado),
 ]
