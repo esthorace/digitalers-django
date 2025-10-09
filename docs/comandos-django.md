@@ -17,3 +17,19 @@
 ## Crear una aplicación
 
     python manage.py startapp app
+
+## Crear las migraciones
+
+    python manage.py makemigrations
+
+## Aplicar las migraciones
+
+    python manage.py migrate
+
+## Crear superusuario
+
+    python manage.py createsuperuser
+
+## Uso del shell
+    
+    python manage.py shell
