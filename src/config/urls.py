@@ -18,29 +18,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from pruebas.views import (
-    index,
-    listar_notas,
-    mi_json,
-    nombres,
-    saludar,
-    saludar_con_etiqueta,
-    saludar_con_parametros,
-    tirar_dado,
-)
-
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", index),
-    path("saludar/", saludar),
-    path("saludar2/", saludar_con_etiqueta),
-    path("saludar3/<str:nombre>/<str:apellido>", saludar_con_parametros),
-    path("json/", mi_json),
-    path("notas/list/", listar_notas),
-    path("nombres/", nombres),
-    path("dados/", tirar_dado),
 ]
 
 urlpatterns += [
     path("clientes/", include("clientes.urls")),
+    path("pruebas/", include("pruebas.urls")),
 ]
