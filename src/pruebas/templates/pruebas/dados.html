@@ -8,6 +8,9 @@
 <body>
     <h1>{{ titulo }}</h1>
     <main><p>{{ mensaje }}</p></main>
+    <button><a href="{% url 'pruebas:index' %}">Volver</a></button>
+
     <footer>Hecho en Django en {{ fecha }}</footer>
+
 </body>
 </html>
