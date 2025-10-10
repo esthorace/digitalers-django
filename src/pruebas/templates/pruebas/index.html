@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Moderna App Web</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderna App Web</title>
+</head>
 
-    <body>
-        <main>
-            <h1>Django</h1>
-            <ul>
-                <li>Es un framework moderno para crear aplicaciones web</li>
-                <li>Su comunidad mundial es muy grande</li>
-                <li>Hay miles de herramientas para no reinventar la rueda</li>
-                <li><a href="{% url 'pruebas:saludar' %}">Saludar</a></li>
-                <li><a href="{% url 'pruebas:saludar_con_etiqueta' %}">Saludar con etiqueta</a></li>
-                <li><a href="{% url 'pruebas:tirar_dado' %}">Tirar Dado</a></li>
-            </ul>
-        </main>
-        <footer>Hecho en el año {{ año }} </footer>
-    </body>
+<body>
+    <main>
+        <h1>Django</h1>
+        <ul>
+            <li>Es un framework moderno para crear aplicaciones web</li>
+            <li>Su comunidad mundial es muy grande</li>
+            <li>Hay miles de herramientas para no reinventar la rueda</li>
+            <li><a href="{% url 'pruebas:saludar' %}">Saludar</a></li>
+            <li><a href="{% url 'pruebas:saludar_con_etiqueta' %}">Saludar con etiqueta</a></li>
+            <li><a href="{% url 'pruebas:tirar_dado' %}">Tirar Dado</a></li>
+        </ul>
+        <button>
+            <a href="{% url 'core:index' %}">Inicio</a>
+        </button>
+    </main>
+    <footer>Hecho en el año {{ año }} </footer>
+</body>
 
 </html>

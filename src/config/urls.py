@@ -23,6 +23,7 @@ urlpatterns = [
 ]
 
 urlpatterns += [
+    path("", include("core.urls")),
     path("clientes/", include("clientes.urls")),
     path("pruebas/", include("pruebas.urls")),
 ]
