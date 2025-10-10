@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de países</h1>
+    {% for pais in paises %}
+        <p>
+            {{ pais.nombre }}
+        </p>
+    {% endfor %}
+    <button>
+        <a href="{% url 'clientes:index' %}">Volver</a>
+    </button>
+</body>
+</html>
