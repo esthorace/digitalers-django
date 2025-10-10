@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'core/base.html' %}
+
+
+{% block content %}
     <h1>Mi Proyecto Django</h1>
     <button><a href="{% url 'clientes:index' %}">App Clientes</a></button>
     <button><a href="{% url 'pruebas:index' %}">App Pruebas</a></button>
-</body>
-</html>
+{% endblock content %}
+    
